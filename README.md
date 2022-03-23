@@ -2,7 +2,9 @@
 
 Group Members:
 Eric Gonzalez
+
 Chris Barwicki
+
 Ephraim Picker
 
 Link to website:
