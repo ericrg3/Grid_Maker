@@ -1,12 +1,12 @@
 # Assignment 3 - Grid_Maker
 
-Group Members:
+Group Members/ Github
 
-Eric Gonzalez
+Eric Gonzalez/ ericrg3
 
-Chris Barwicki
+Chris Barwicki/ cbarwicki
 
-Ephraim Picker
+Ephraim Picker/ EphraimPicker
 
 Link to website:
 
