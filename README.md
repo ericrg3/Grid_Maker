@@ -8,5 +8,5 @@ Chris Barwicki/ cbarwicki
 
 Ephraim Picker/ EphraimPicker
 
-[Link to website](https://ericrg3.github.io/Grid_Maker.git)
+[Link to website](https://ericrg3.github.io/Grid_Maker/)
 
