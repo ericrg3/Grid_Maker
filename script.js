@@ -3,14 +3,37 @@ let numRows = 0;
 let numCols = 0;
 let colorSelected; 
 
-// Add a row
+// Add a row // Done by Chris Barwicki
 function addR() {
-    alert("Clicked Add Row"); // Replace this line with your code.
+    const grid = document.getElementById('grid');
+    const row = document.createElement('tr');
+    // makes row of size numCols
+    for (let i=0; i < numCols; i++){
+        const col = document.createElement('td');
+        row.appendChild(col);
+    }
+    grid.appendChild(row);
+    numRows++;      // track number of rows
+    let cell = row.insertCell(-1);
+    cell.onclick = function(){
+        this.style.backgroundColor = colorSelected;
+    }
 }
 
-// Add a column
+// Add a column // Done by Chris Barwicki
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+    const grid = document.getElementById('grid');
+    // makes column of size numRows
+    for (let i=0; i < numRows; i++){
+        const row = grid.children[i];
+        const col = document.createElement('td');
+        row.appendChild(col);
+    }
+    numCols++;      // track number of columns
+    let cell = row[i].insertCell(-1);
+    cell.onclick = function(){
+        this.style.backgroundColor = colorSelected;
+    }
 }
 
 // Remove a row //Done by Eric Gonzalez
@@ -22,9 +45,14 @@ function removeR() {
     }  
 }
 
-// Remove a column
+// Remove a column // Done by Chris Barwicki
 function removeC() {
-    alert("Clicked Remove Col"); // Replace this line with your code.
+    const grid = document.getElementById('grid');
+    for (let i=0; i < numRows; i++){
+        const row = grid.children[i];
+        row.deleteCell(-1);
+    }
+    numCols--;      // track number of columns
 }
 
 // Set global variable for selected color
@@ -43,9 +71,14 @@ function fillU(){
     }
 }
 
-// Fill all cells
+// Fill all cells // Done by Chris Barwicki
 function fillAll(){
-    alert("Clicked Fill All"); // Replace this line with your code.
+    // all cells contained in variable cell
+    const cell = document.getElementsByTagName("td");
+    for(let i = 0; i < cell.length; i++){
+        // change color of each cell
+        cell[i].style.backgroundColor = colorSelected;
+    }
 }
 
 // Clear all cells //Done by Eric Gonzalez
